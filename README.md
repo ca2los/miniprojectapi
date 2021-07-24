@@ -1,5 +1,7 @@
 # Mini Project: Project Tracker
 
+##### Karen is here
+
 In this project, you will work with others to create a project tracker application using Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts. Break up these phases amongst members of your team.
 
 ## Instructions
@@ -14,35 +16,35 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
 3. The modal should contain a form asking users to fill in the following data:
 
-    * The name of the project
+   - The name of the project
 
-    * The type of project (use a `<select>` drop-down)
+   - The type of project (use a `<select>` drop-down)
 
-    * The hourly wage for the project
+   - The hourly wage for the project
 
-    * The due date for the project (use jQuery UI's datepicker with a minimum date setting in place)
+   - The due date for the project (use jQuery UI's datepicker with a minimum date setting in place)
 
 4. Include a Bootstrap table that the project's information can be printed to with columns for the following data:
 
-    * Project name
+   - Project name
 
-    * Project type
+   - Project type
 
-    * Hourly wage
+   - Hourly wage
 
-    * Due date
+   - Due date
 
-    * Days until the due date (use Moment.js to calculate)
+   - Days until the due date (use Moment.js to calculate)
 
-    * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until the due date)
+   - Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until the due date)
 
 While you build, remember the following guidelines:
 
-  * Ensure that any elements you need to interact with using JavaScript/jQuery are properly identified (e.g., form elements, the table body, etc.).
+- Ensure that any elements you need to interact with using JavaScript/jQuery are properly identified (e.g., form elements, the table body, etc.).
 
-  * Use different `<input>` element attributes to help enforce rules, like different `type` attribute values, minimum values, and required! See the [MDN web docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more guidance.
+- Use different `<input>` element attributes to help enforce rules, like different `type` attribute values, minimum values, and required! See the [MDN web docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more guidance.
 
-  * When in doubt, read the Bootstrap documentation.
+- When in doubt, read the Bootstrap documentation.
 
 ---
 
@@ -66,9 +68,9 @@ While you build, remember the following guidelines:
 
 3. Create a table detail (`<td>`) element for each of the table columns created in Task 1.
 
-4. For printing the days to the due date, use Moment.js to calculate the difference between the due date and the current time in days. 
+4. For printing the days to the due date, use Moment.js to calculate the difference between the due date and the current time in days.
 
-5. For printing the estimated total earned amount, assume that you work an eight-hour day. So multiply the hourly rate by 8 to get the daily rate, then multiply that value by how many days until the project is due to get the estimated total earned. 
+5. For printing the estimated total earned amount, assume that you work an eight-hour day. So multiply the hourly rate by 8 to get the daily rate, then multiply that value by how many days until the project is due to get the estimated total earned.
 
 6. Append all `<td>` elements to the table row created, then append the entire row to the `<tbody>` element on the page.
 
