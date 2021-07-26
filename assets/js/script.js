@@ -3,12 +3,6 @@
         $( "#datepicker" ).datepicker();
     });
 
-    // JQ Official - Sortable
-    $(function(){
-        $( "#sortable" ).sortable();
-        $( "#sortable" ).disableSelection();
-    });
-
     // JQ Official - Moment JS
     let date_today = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
     $("#time-display").text(date_today);
