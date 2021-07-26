@@ -56,44 +56,57 @@ function projectForm(event) {
 
   var trEl = $('<tr class = "item">');
 
-  //add text
-  projectListItemName.text(projectNameInput);
-  projectListItemType.text(projectTypeInput);
-  projectListItemHourlyRate.text(projectHourlyRateInput);
-  projectListItemDueDate.text(projectDueDateInput);
-  deleteListItem.text("X");
-  //new ones
-  projectListItemDaysUntilDue.text("nothing yet"); //not done
-  projectListItemPotentialTotalEarnings.text(potentialTotalEarnings);
-  //append them
+  //validate that there is text
 
-  whereProjectListNameGoes.append(trEl);
-  trEl.append(projectListItemName);
-  trEl.append(projectListItemType);
-  trEl.append(projectListItemHourlyRate);
-  trEl.append(projectListItemDueDate);
-  trEl.append(projectListItemDaysUntilDue);
-  trEl.append(projectListItemPotentialTotalEarnings);
-  trEl.append(deleteListItem);
+  if (
+    !projectNameInput ||
+    !projectTypeInput ||
+    !projectHourlyRateInput ||
+    !projectDueDateInput
+  ) {
+    //if there is no item cant make project list item
+    console.log("no item");
+    return; //this is stopping the function and telling it to start over
+  } else {
+    //add text
+    projectListItemName.text(projectNameInput);
+    projectListItemType.text(projectTypeInput);
+    projectListItemHourlyRate.text(projectHourlyRateInput);
+    projectListItemDueDate.text(projectDueDateInput);
+    deleteListItem.text("X");
+    //new ones
+    projectListItemDaysUntilDue.text("nothing yet"); //not done
+    projectListItemPotentialTotalEarnings.text(potentialTotalEarnings);
+    //append them
 
-  //clear
+    whereProjectListNameGoes.append(trEl);
+    trEl.append(projectListItemName);
+    trEl.append(projectListItemType);
+    trEl.append(projectListItemHourlyRate);
+    trEl.append(projectListItemDueDate);
+    trEl.append(projectListItemDaysUntilDue);
+    trEl.append(projectListItemPotentialTotalEarnings);
+    trEl.append(deleteListItem);
 
-  projectNameInput = $('input[ id = "project-name-input"]').val(" ");
-  projectTypeInput = $("option:selected").empty();
-  projectHourlyRateInput = $('input[ id = "hourly-rate-input"]').val(" ");
-  projectDueDateInput = $('input[ id = "due-date-input"]').val(" ");
+    //clear
 
-  //close the modal
+    projectNameInput = $('input[ id = "project-name-input"]').val(" ");
+    projectTypeInput = $("option:disabled");//this needs work
+    projectHourlyRateInput = $('input[ id = "hourly-rate-input"]').val(" ");
+    projectDueDateInput = $('input[ id = "due-date-input"]').val(" ");
 
-  $("#project-modal").modal("hide");
+    //close the modal
 
-  //for when delete item
-  deleteListItem.on("click", function (event) {
-    console.log("button");
+    $("#project-modal").modal("hide");
 
-    $(event.target).parent().remove(); //the parent is the li we created button is a child
-    //i think it is get the event.target
-  });
+    //for when delete item
+    deleteListItem.on("click", function (event) {
+      console.log("button");
+
+      $(event.target).parent().remove(); //the parent is the li we created button is a child
+      //i think it is get the event.target
+    });
+  }
 }
 
 submitFormBtn.on("click", projectForm);
