@@ -83,7 +83,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="project-name-input">Project Name</label>
-                            <input type="text" id="project-name-input" class="form-control" placeholder="Enter the project's name"
+                            <input type="text" id="project-name-input" class="form-control" placeholder="Enter the project's name" name="project-form"
                                    required />
                         </div>
 
@@ -107,7 +107,7 @@
 
                         <div class="form-group">
                             <label for="due-date-input">Due Date</label>
-                            <input type="text" min='1' id="due-date-input" class="form-control" placeholder="When is the project due?"
+                            <input type="text" min='1' id="datepicker" class="form-control" placeholder="When is the project due?"
                                    required />
                         </div>
                     </div>
@@ -120,6 +120,7 @@
         </div>
     </div>
 
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
