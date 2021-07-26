@@ -59,15 +59,15 @@ function projectForm(event) {
   //validate that there is text
 
   if (
-    !projectNameInput ||
-    !projectTypeInput ||
-    !projectHourlyRateInput ||
-    !projectDueDateInput
+    projectNameInput &&
+    projectTypeInput &&
+    projectHourlyRateInput &&
+    projectDueDateInput
   ) {
     //if there is no item cant make project list item
-    console.log("no item");
-    return; //this is stopping the function and telling it to start over
-  } else {
+    //console.log("no item");
+    //return; //this is stopping the function and telling it to start over
+
     //add text
     projectListItemName.text(projectNameInput);
     projectListItemType.text(projectTypeInput);
@@ -91,7 +91,7 @@ function projectForm(event) {
     //clear
 
     projectNameInput = $('input[ id = "project-name-input"]').val(" ");
-    projectTypeInput = $("option:disabled");//this needs work
+    projectTypeInput = $("option:disabled"); //this needs work
     projectHourlyRateInput = $('input[ id = "hourly-rate-input"]').val(" ");
     projectDueDateInput = $('input[ id = "due-date-input"]').val(" ");
 
